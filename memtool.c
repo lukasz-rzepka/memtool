@@ -60,7 +60,3 @@ my_free_hook (void *ptr, const void *caller)
     __free_hook = my_free_hook;
 }
 
-int main ()
-{
-    return 0;
-}
