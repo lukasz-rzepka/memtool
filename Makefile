@@ -1,6 +1,6 @@
 IDIR =../include
 CC=gcc
-CFLAGS=-I$(IDIR) -fPIC -g -O0
+CFLAGS=-I$(IDIR) -fPIC -g -O0 -Wno-deprecated-declarations
 LDFLAGS=-shared
 
 ODIR=obj
@@ -26,4 +26,4 @@ memtool.so: $(OBJ)
 .PHONY: clean
 
 clean:
-		rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
+		rm -f $(ODIR)/*.o core memtool.so
