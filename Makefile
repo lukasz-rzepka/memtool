@@ -1,6 +1,6 @@
-IDIR =../include
+IDIR=-I/usr/include
 CC=gcc
-CFLAGS=-I$(IDIR) -fPIC -g -O0 -Wno-deprecated-declarations
+CFLAGS=$(IDIR) -fPIC -g -O0 -Wno-deprecated-declarations -pthread
 LDFLAGS=-shared
 
 ODIR=obj
@@ -21,7 +21,7 @@ $(ODIR)/%.o: %.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 memtool.so: $(OBJ)
-		gcc -o $@ $^ $(CFLAGS) $(LIBS) $(LDFLAGS)
+		$(CC) -o $@ $^ $(CFLAGS) $(LIBS) $(LDFLAGS)
 
 .PHONY: clean
 
