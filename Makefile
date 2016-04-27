@@ -10,10 +10,10 @@ $(shell [ -d "$(ODIR)" ] || mkdir -p $(ODIR))
 
 #LIBS=-lm
 
-#_DEPS = hellomake.h
+_DEPS = actions.h
 #DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = memtool.o 
+_OBJ = memtool.o action.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 

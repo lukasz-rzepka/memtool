@@ -1,6 +1,7 @@
 /* Prototypes for __malloc_hook, __free_hook */
 #include <malloc.h>
 #include <pthread.h>
+#include "actions.h"
 
 /* Prototypes for our hooks.  */
 static void my_init_hook (void);
